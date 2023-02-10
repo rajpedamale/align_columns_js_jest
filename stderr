@@ -1,9 +1,48 @@
 FAIL ./align_columns.test.js
   Align Columns
-    ✓ should return text (18 ms)
-    ✓ should return white space separated text for $ separated text (6 ms)
-    ✓ should return space separated text for columns of equal width for multiline text (2 ms)
-    ✕ should return columns aligned over multiline text (9 ms)
+    ✓ should return text (3 ms)
+    ✕ should return white space separated text for $ separated text (3 ms)
+    ✕ should return space separated text for columns of equal width for multiline text (3 ms)
+    ✕ should return columns aligned over multiline text (1 ms)
+
+  ● Align Columns › should return white space separated text for $ separated text
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "Given a text file of many lines, where fields within a line "
+    Received: "Given a text file of many lines, where fields within a line  "
+
+      27 |   
+      28 |   it('should return white space separated text for $ separated text', () => {
+    > 29 |     expect(align_columns(sampleTextSingleLine)).toEqual(alignedTextSingleLine);
+         |                                                 ^
+      30 |   });
+      31 |   
+      32 |   it('should return space separated text for columns of equal width for multiline text', () => {
+
+      at Object.<anonymous> (align_columns.test.js:29:49)
+
+  ● Align Columns › should return space separated text for columns of equal width for multiline text
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+    - aaa bbb
+    + aaa bbb 
+    - aaa bbb
+    + aaa bbb
+
+      31 |   
+      32 |   it('should return space separated text for columns of equal width for multiline text', () => {
+    > 33 |     expect(align_columns(sampleTextTwoLines)).toEqual(alignedTextTwoLines);
+         |                                               ^
+      34 |   });
+      35 |   
+      36 |   it('should return columns aligned over multiline text', () => {
+
+      at Object.<anonymous> (align_columns.test.js:33:47)
 
   ● Align Columns › should return columns aligned over multiline text
 
@@ -13,13 +52,13 @@ FAIL ./align_columns.test.js
     + Received  + 4
 
     - Given  a          text      file   of     many     lines,     where    fields within  a  line 
-    + Given a text file of many lines, where fields within a line 
+    + Given  a          text      file   of     many     lines,     where    fields within  a  line  
     - are    delineated by        a      single 'dollar' character, write    a      program
-    + are delineated by a single 'dollar' character, write a program
+    + are    delineated by        a      single 'dollar' character, write    a      program 
     - that   aligns     each      column of     fields   by         ensuring that   words   in each 
-    + that aligns each column of fields by ensuring that words in each 
+    + that   aligns     each      column of     fields   by         ensuring that   words   in each  
     - column are        separated by at  least  one      space.
-    + column are separated by at least one space.
+    + column are        separated by     at     least    one        space.
 
       35 |   
       36 |   it('should return columns aligned over multiline text', () => {
@@ -32,9 +71,9 @@ FAIL ./align_columns.test.js
       at Object.<anonymous> (align_columns.test.js:37:39)
 
 Test Suites: 1 failed, 1 total
-Tests:       1 failed, 3 passed, 4 total
+Tests:       3 failed, 1 passed, 4 total
 Snapshots:   0 total
-Time:        1.496 s
+Time:        1.41 s
 Ran all test suites.
 npm ERR! code ELIFECYCLE
 npm ERR! errno 1
@@ -45,4 +84,4 @@ npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-10T05_07_51_205Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-10T05_08_26_048Z-debug.log

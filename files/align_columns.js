@@ -8,15 +8,19 @@ const updateColumnWidths = (columnWidthArray) => (column, index) => {
   }
 };
 
+function buildColumn(columnWidths) {
+  return (column, index) => column.padEnd(columnWidths[index], ' ');
+}
+
 function align_columns(delimitedText) {
   const columnWidths = [];
   const lines = delimitedText.split('\n').map((line) => line.split('$'));
   lines.forEach((line) => {
     line.forEach(updateColumnWidths(columnWidths));
   });
-  console.log(columnWidths);
 
-  return lines.map((line => line.join(' '))).join('\n');
+  return lines.map((line => line.map(buildColumn(columnWidths)).join(''))).join('\n');
 }
+
 
 module.exports = align_columns;
