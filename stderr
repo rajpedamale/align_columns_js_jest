@@ -1,10 +1,11 @@
 PASS ./align_columns.test.js
   Align Columns
     ✓ should return text (2 ms)
-    ✓ should return white space separated text for $ separated text (1 ms)
+    ✓ should return white space separated text for $ separated text
+    ✓ should return space separated text for columns of equal width for multiline text
 
 Test Suites: 1 passed, 1 total
-Tests:       2 passed, 2 total
+Tests:       3 passed, 3 total
 Snapshots:   0 total
-Time:        1.291 s
+Time:        1.303 s
 Ran all test suites.
