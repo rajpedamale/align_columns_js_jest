@@ -1,30 +1,29 @@
-npm ERR! code ELIFECYCLE
-npm ERR! errno 1
-npm ERR! @ lint: `eslint --config ${CYBER_DOJO_SANDBOX}/.eslintrc.json /**/*.js`
-npm ERR! Exit status 1
-npm ERR! 
-npm ERR! Failed at the @ lint script.
-npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-10T03_14_29_019Z-debug.log
 FAIL ./align_columns.test.js
-  ● Test suite failed to run
+  Align Columns
+    ✓ should return text (3 ms)
+    ✕ should return white space separated text for $ separated text (5 ms)
 
-    SyntaxError: /sandbox/align_columns.test.js: Unexpected token, expected "," (15:0)
+  ● Align Columns › should return white space separated text for $ separated text
 
-      13 |     expect(align_columns(sampleText)).toEqual('Given a text file of many lines, where fields within a line ');
-      14 |   }
-    > 15 | });
-         | ^
-      16 |
+    expect(received).toEqual(expected) // deep equality
 
-      at Parser._raise (../etc/jest/node_modules/@babel/parser/src/parser/error.js:60:45)
+    Expected: "Given a text file of many lines, where fields within a line "
+    Received: "Given$a$text$file$of$many$lines,$where$fields$within$a$line$"
+
+      11 |   
+      12 |   it('should return white space separated text for $ separated text', () => {
+    > 13 |     expect(align_columns(sampleText)).toEqual('Given a text file of many lines, where fields within a line ');
+         |                                       ^
+      14 |   });
+      15 | });
+      16 | 
+
+      at Object.<anonymous> (align_columns.test.js:13:39)
 
 Test Suites: 1 failed, 1 total
-Tests:       0 total
+Tests:       1 failed, 1 passed, 2 total
 Snapshots:   0 total
-Time:        1.528 s
+Time:        1.375 s
 Ran all test suites.
 npm ERR! code ELIFECYCLE
 npm ERR! errno 1
@@ -35,4 +34,4 @@ npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-10T03_14_31_510Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-10T03_14_51_329Z-debug.log

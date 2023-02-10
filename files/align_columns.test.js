@@ -11,5 +11,5 @@ describe('Align Columns', () => {
   
   it('should return white space separated text for $ separated text', () => {
     expect(align_columns(sampleText)).toEqual('Given a text file of many lines, where fields within a line ');
-  }
+  });
 });
