@@ -1,7 +1,8 @@
 'use strict';
 
 function align_columns(delimitedText) {
-  return delimitedText;
+  const columns = delimitedText.split('$');
+  return columns.join(' ');
 }
 
 module.exports = align_columns;
