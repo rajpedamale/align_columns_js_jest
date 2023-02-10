@@ -34,6 +34,6 @@ describe('Align Columns', () => {
   });
   
   it('should return columns aligned over multiline text', () => {
-    expect(align_columns(sampleTextTwoLines)).toEqual(alignedTextTwoLines);
+    expect(align_columns(sampleText)).toEqual(alignedSampleText);
   });
 });
