@@ -171,5 +171,21 @@
       10,
       563169
     ]
+  },
+  {
+    "duration": 4.146745,
+    "colour": "amber",
+    "predicted": "red",
+    "revert_if_wrong": "off",
+    "index": 11,
+    "time": [
+      2023,
+      2,
+      10,
+      4,
+      36,
+      11,
+      64751
+    ]
   }
 ]

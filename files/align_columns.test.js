@@ -6,9 +6,19 @@ const sampleText = `Given$a$text$file$of$many$lines,$where$fields$within$a$line$
 are$delineated$by$a$single$'dollar'$character,$write$a$program
 that$aligns$each$column$of$fields$by$ensuring$that$words$in$each$
 column$are$separated$by$at$least$one$space.`;
+const alignedSampleText = 
+`Given  a          text      file   of     many     lines,     where    fields within  a  line 
+are    delineated by        a      single 'dollar' character, write    a      program
+that   aligns     each      column of     fields   by         ensuring that   words   in each 
+column are        separated by at  least  one      space.`;
 
 const sampleTextSingleLine = 'Given$a$text$file$of$many$lines,$where$fields$within$a$line$';
 const alignedTextSingleLine = 'Given a text file of many lines, where fields within a line ';
+
+const sampleTextTwoLines = `aaa$bbb
+aaa$bbb`;
+const alignedTextTwoLines = `aaa bbb
+aaa bbb`;
 
 const sampleTextTwoLines = `aaa$bbb
 aaa$bbb`;
@@ -25,6 +35,10 @@ describe('Align Columns', () => {
   });
   
   it('should return space separated text for columns of equal width for multiline text', () => {
+    expect(align_columns(sampleTextTwoLines)).toEqual(alignedTextTwoLines);
+  });
+  
+  it('should return columns aligned over multiline text', () => {
     expect(align_columns(sampleTextTwoLines)).toEqual(alignedTextTwoLines);
   });
 });
