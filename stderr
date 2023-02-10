@@ -1,45 +1,34 @@
-npm ERR! code ELIFECYCLE
-npm ERR! errno 1
-npm ERR! @ lint: `eslint --config ${CYBER_DOJO_SANDBOX}/.eslintrc.json /**/*.js`
-npm ERR! Exit status 1
-npm ERR! 
-npm ERR! Failed at the @ lint script.
-npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-10T03_34_55_374Z-debug.log
 FAIL ./align_columns.test.js
-  ● Test suite failed to run
+  Align Columns
+    ✓ should return text (3 ms)
+    ✓ should return white space separated text for $ separated text
+    ✕ should return space separated text for columns of equal width for multiline text (4 ms)
 
-    Jest encountered an unexpected token
+  ● Align Columns › should return space separated text for columns of equal width for multiline text
 
-    This usually means that you are trying to import a file which Jest cannot parse, e.g. it's not plain JavaScript.
+    expect(received).toEqual(expected) // deep equality
 
-    By default, if Jest sees a Babel config, it will use that to transform your files, ignoring "node_modules".
+    - Expected  - 2
+    + Received  + 1
 
-    Here's what you can do:
-     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
-     • If you need a custom transformation specify a "transform" option in your config.
-     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+    - aaa bbb
+    - aaa bbb
+    + aaa bbb aaa bbb
 
-    You'll find more details and examples of these config options in the docs:
-    https://jestjs.io/docs/en/configuration.html
+      26 |   
+      27 |   it('should return space separated text for columns of equal width for multiline text', () => {
+    > 28 |     expect(align_columns(sampleTextTwoLines)).toEqual(alignedTextTwoLines);
+         |                                               ^
+      29 |   });
+      30 | });
+      31 | 
 
-    Details:
-
-    SyntaxError: /sandbox/align_columns.js: Unexpected token (10:0)
-
-       8 | 
-       9 | module.exports = align_columns;
-    > 10 | 
-         | ^
-
-      at Parser._raise (../etc/jest/node_modules/@babel/parser/src/parser/error.js:60:45)
+      at Object.<anonymous> (align_columns.test.js:28:47)
 
 Test Suites: 1 failed, 1 total
-Tests:       0 total
+Tests:       1 failed, 2 passed, 3 total
 Snapshots:   0 total
-Time:        1.5 s
+Time:        1.398 s
 Ran all test suites.
 npm ERR! code ELIFECYCLE
 npm ERR! errno 1
@@ -50,4 +39,4 @@ npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-10T03_34_57_815Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-10T03_35_50_887Z-debug.log
