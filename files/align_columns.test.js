@@ -20,11 +20,6 @@ aaa$bbb`;
 const alignedTextTwoLines = `aaa bbb
 aaa bbb`;
 
-const sampleTextTwoLines = `aaa$bbb
-aaa$bbb`;
-const alignedTextTwoLines = `aaa bbb
-aaa bbb`;
-
 describe('Align Columns', () => {
   it('should return text', () => {
     expect(typeof align_columns(sampleText)).toEqual('string');
