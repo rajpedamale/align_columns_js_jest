@@ -6,6 +6,29 @@
 > @ test /sandbox
 > jest --coverage
 
+  console.log
+    [
+       7, 11, 10, 7, 7, 9,
+      11,  9,  7, 8, 3, 5,
+       1
+    ]
+
+      at align_columns (align_columns.js:17:11)
+
+  console.log
+    [
+      6, 2, 5, 5, 3, 5,
+      7, 6, 7, 7, 2, 5,
+      1
+    ]
+
+      at align_columns (align_columns.js:17:11)
+
+  console.log
+    [ 4, 4 ]
+
+      at align_columns (align_columns.js:17:11)
+
 ------------------|---------|----------|---------|---------|-------------------
 File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------|---------|----------|---------|---------|-------------------
