@@ -19,7 +19,7 @@ function align_columns(delimitedText) {
     line.forEach(updateColumnWidths(columnWidths));
   });
 
-  return lines.map((line => line.map(buildColumn(columnWidths)).join(''))).join('\n');
+  return lines.map((line => line.map(buildColumn(columnWidths)).join('').trim())).join('\n');
 }
 
 
